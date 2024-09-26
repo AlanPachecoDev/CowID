@@ -1,0 +1,49 @@
+# Para VACAS
+
+#GET todas las vacas
+GET http://localhost:3000/vacas
+###
+#LastVaca
+GET http://localhost:3000/vacas/ultima
+###
+
+#Get Vaca por id
+GET http://localhost:3000/vacas/8
+
+###
+
+#Get Cantidad de Vacas
+GET http://localhost:3000/vacas/count
+
+###
+
+#Insertar una Vaca
+POST http://localhost:3000/vacas/create
+Content-Type: application/json
+
+{
+    "peso": 210.5,
+    "fechaNacimiento": "2022/5/5",
+    "numeroPartos": 0,
+    "qr": "AWDFPOUIPFADWIOPHEIF",
+    "parcelaUbicacion": "Tercera Parcela",
+    "edadDestete": 1,
+    "aptaParaProduccion": 0
+}
+
+###
+
+#Eliminar Vaca por ID
+GET http://localhost:3000/vacas/delete/1
+
+###
+
+#Actualizar Vaca por ID
+PUT http://localhost:3000/vacas/update/8
+Content-Type: application/json
+
+{
+    "parcelaUbicacion": "Parcela Actualizada",
+    "edadDestete": 2
+}
+

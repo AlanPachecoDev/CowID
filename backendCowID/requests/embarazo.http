@@ -1,0 +1,34 @@
+#Para EMBARAZOS
+
+GET http://localhost:3000/embarazos
+
+###
+#Last embarazos
+GET http://localhost:3000/embarazos/ultimo
+###
+GET http://localhost:3000/embarazos/1
+
+###
+GET http://localhost:3000/embarazos/count
+
+###
+POST http://localhost:3000/embarazos/create
+Content-Type: application/json
+
+{
+    "VacaID": 8,
+    "FechaInseminacion": "2022/5/18",
+    "FechaParto": "2022/12/18"
+}
+
+###
+GET http://localhost:3000/embarazos/delete/1
+
+###
+PUT http://localhost:3000/embarazos/update/1
+Content-Type: application/json
+
+{
+    "FechaInseminacion": "2022/5/17",
+    "FechaParto": "2022/12/17"
+}

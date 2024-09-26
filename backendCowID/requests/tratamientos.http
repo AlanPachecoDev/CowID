@@ -1,0 +1,36 @@
+# Para TRATAMIENTOS
+
+GET http://localhost:3000/tratamientos
+
+###
+#LastTratamiento
+GET http://localhost:3000/tratamientos/ultimo
+
+###
+GET http://localhost:3000/tratamientos/1
+
+###
+GET http://localhost:3000/tratamientos/count
+
+###
+POST http://localhost:3000/tratamientos/create
+Content-Type: application/json
+
+{
+    "VacaID": 8,
+    "EnfermedadID": 1,
+    "NombreDoctorTratante": "Alansito Pacheco",
+    "Descripcion": "Para el mal de vaca-amor"
+}
+
+###
+GET http://localhost:3000/tratamientos/delete/1
+
+###
+PUT http://localhost:3000/tratamientos/update/1
+Content-Type: application/json
+
+{
+    "NombreDoctorTratante": "Alan Jossueth Pacheco Cueva",
+    "Descripcion": "Para la vaca-depre"
+}

@@ -1,0 +1,47 @@
+# Para PRODUCCION
+
+#GET todas las producciones
+GET http://localhost:3000/producciones
+
+###
+#LastProduccion
+GET http://localhost:3000/producciones/ultima
+###
+
+#Get Produccion por id
+GET http://localhost:3000/producciones/1
+
+###
+
+#Get Cantidad de Producciones
+GET http://localhost:3000/producciones/count
+
+###
+
+#Insertar una Produccion
+POST http://localhost:3000/producciones/create
+Content-Type: application/json
+
+{
+    "VacaID": 8,
+    "Fecha": "2022/5/18",
+    "CantidadManana": 10.8,
+    "CantidadTarde": 13.5
+}
+
+###
+
+#Eliminar Produccion por ID
+GET http://localhost:3000/producciones/delete/1
+
+###
+
+#Actualizar Produccion por ID
+PUT http://localhost:3000/producciones/update/1
+Content-Type: application/json
+
+{
+    "CantidadManana": 10,
+    "CantidadTarde": 13
+}
+

@@ -1,0 +1,36 @@
+# Para ENFERMEDADES
+
+GET http://localhost:3000/enfermedades
+
+###
+#Lastenfermedad
+GET http://localhost:3000/enfermedades/ultima
+###
+GET http://localhost:3000/enfermedades/1
+
+###
+GET http://localhost:3000/enfermedades/count
+
+###
+POST http://localhost:3000/enfermedades/create
+Content-Type: application/json
+
+{
+    "VacaID": 8,
+    "FechaDeteccion": "2022/5/10",
+    "FechaCuracion": "2022/5/15",
+    "Nombre": "Enfermedad de la vaca-love",
+    "Descripcion": "Una vaca se siente tan enamorada que puede morir"
+}
+
+###
+GET http://localhost:3000/enfermedades/delete/1
+
+###
+PUT http://localhost:3000/enfermedades/update/1
+Content-Type: application/json
+
+{
+    "Nombre": "Enfermedad de la vaca-sad",
+    "Descripcion": "Causa la vaca-depre"
+}
